@@ -38,6 +38,7 @@ This tool was created as a **learning project** to:
 ```bash
 python fuzz.py -u "https://example.com/FUZZ" -w wordlist.txt
 ```
+### 🧪 JSON Body Fuzzing
 
 ```bash
 python fuzz.py -u "https://example.com/api" -X POST \
@@ -45,6 +46,8 @@ python fuzz.py -u "https://example.com/api" -X POST \
   -H "{\"Content-Type\": \"application/json\"}" \
   -D "{\"username\": \"FUZZ\"}
 ```
+### 🧪 JSON Body Fuzzing
+
 ```bash
 python fuzz.py -u "https://target.com/FUZZ" -w paths.txt -o results.txt
 
