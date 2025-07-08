@@ -1,6 +1,7 @@
 import requests
 import sys
 import json
+import argparse
 
 
 
@@ -71,8 +72,7 @@ def fuzz_endpoints(url, filename, method="get", data=None, headers=None, status=
 
     
     
-import argparse
-import json
+
 
 def main():
     print(r"""
