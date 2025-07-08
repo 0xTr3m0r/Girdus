@@ -32,7 +32,7 @@ def fuzz_endpoints(url, filename, method="get", data=None, headers=None, status=
                     found_endpoints.append(full_url)
                     print(f"[+] Found endpoint: {full_url}")
                 else:
-                    print(f"[-] {full_url} --> {response.status_code}")
+                    continue
             except requests.RequestException as e:
                 print(f"[!] Request failed for {full_url}: {e}")
                 continue
@@ -59,7 +59,7 @@ def fuzz_endpoints(url, filename, method="get", data=None, headers=None, status=
                     found_endpoints.append(fuzzed_data)
                     print(f"[+] Valid JSON payload: {json.dumps(fuzzed_data)}")
                 else:
-                    print(f"[-] Payload --> {response.status_code}")
+                    continue
             except requests.RequestException as e:
                 print(f"[!] Request failed for JSON payload: {e}")
                 continue
