@@ -56,7 +56,7 @@ def subdomain_enum(domain: str, subdomains: List[str], threads: int = 10) -> Lis
             result = future.result()
             if result:
                 found_subs.append(result)
-                print(f"[+] Found: {result}")
+                tqdm.write(f"[+] Found: {result}")
     return found_subs
 
 def fuzz_endpoints(
@@ -109,7 +109,7 @@ def fuzz_endpoints(
             result = future.result()
             if result:
                 found.append(result)
-                print(f"[+] Found: {result}")
+                tqdm.write(f"[+] Found: {result}")
 
     if output:
         save_results(found, output)
